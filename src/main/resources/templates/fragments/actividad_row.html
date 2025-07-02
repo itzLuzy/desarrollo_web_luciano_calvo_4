@@ -1,0 +1,19 @@
+<tr th:fragment="actividad-row(act)">
+    <td th:text="${act['id']}"> </td>
+    <td th:text="${act['fecha_inicio']}"> </td>
+    <td th:text="${act['sector']}"> </td>
+    <td th:text="${act['nombre']}"> </td>
+    <td th:text="${act['tema']}"> </td>
+    <td th:id="@{nota + ${act['id']}}"> - </td>
+    <td class="clickable-text" th:id="@{eval + ${act['id']}}" onclick="mostrarEvaluacion(this)"> 
+        evaluar
+    </td>
+    <script th:src="@{/js/script.js}"></script>
+    <script th:inline="javascript">
+        window.addEventListener('load', function (e) {
+            e.preventDefault();
+            var actId = /*[[${act['id']}]]*/ "";
+            updateNotaPromedio(actId);
+        })
+    </script>
+</tr>
