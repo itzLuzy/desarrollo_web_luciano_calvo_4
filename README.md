@@ -1,2 +1,2 @@
-# desarrollo_web_luciano_calvo_4
-Tarea 4 CC5002-2025-1
+## Comentarios
+- Tal como se dijo en el foro, asumí que no había que implementar las funcionalidades de las tareas anteriores.
