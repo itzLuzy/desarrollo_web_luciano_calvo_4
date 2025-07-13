@@ -1,0 +1,15 @@
+<tr th:fragment="admin-row(foto)">
+    <td> 
+        <img
+            th:src="@{${foto['ruta_foto']}}"
+            th:alt="${foto['nombre_foto']}"
+            width="150"
+        /> 
+    </td>
+    <td th:text="${foto['nombre_act']}"> </td>
+    <td th:text="${foto['email']}"> </td>
+    <td class="clickable-text" th:id="@{elim + ${foto['id']}}" onclick="mostrarLog(this)"> 
+        eliminar
+    </td>
+    <script th:src="@{/js/script.js}"></script>
+</tr>

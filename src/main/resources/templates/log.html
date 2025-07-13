@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="icon" type="image/x-icon" th:href="@{/favicon.ico}">
+    <title>Admin Fotos</title>
+</head>
+<body>
+    <header>
+        <h1>Log</h1>
+        <div th:replace="~{fragments/nav :: navbar}"></div>
+    </header>
+    <section>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fecha</th>
+                <th>Mensaje</th>
+            </tr>
+        </thead>
+        <tbody th:each="log : ${data}">
+            <tr th:replace="~{fragments/log_row :: log-row(${log})}">
+            </tr>
+        </tbody>
+    </table>
+    </section>
+</body>
+
+</html>
